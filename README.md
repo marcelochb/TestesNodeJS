@@ -1,3 +1,3 @@
-# Testes & TDD com NodeJS
+# Testes & TDD com Jest no NodeJS
 ## GoStack - Bootcamp
 ### Rocketseat
