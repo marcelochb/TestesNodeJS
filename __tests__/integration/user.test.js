@@ -1,5 +1,5 @@
 import request from 'supertest';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import app from '../../src/app';
 
 import truncate from '../util/truncate';
@@ -17,7 +17,7 @@ describe('User', () => {
       password: '123456',
     });
 
-    const compareHash = bcrypt.compare('123456', user.password_hash);
+    const compareHash = await bcrypt.compare('123456', user.password_hash);
 
     expect(compareHash).toBe(true);
   });
